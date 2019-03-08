@@ -15,11 +15,11 @@ You can install this package to run [Axe](https://deque.com/axe) tests against y
 From your theme's root directory, run the following commands:
 
 ```bash
-npm install --save-dev greatislander/wp-theme-auditor
+npm install --save-dev wpaccessibility/wp-theme-auditor
 npx npm-add-script -k "test:axe" -v "wp-scripts test-e2e"
-cp node_modules/@greatislander/wp-theme-auditor/babel.config.js ./
-cp node_modules/@greatislander/wp-theme-auditor/jest.config.js ./
-cp -r node_modules/@greatislander/wp-theme-auditor/test ./
+cp node_modules/@wpaccessibility/wp-theme-auditor/babel.config.js ./
+cp node_modules/@wpaccessibility/wp-theme-auditor/jest.config.js ./
+cp -r node_modules/@wpaccessibility/wp-theme-auditor/test ./
 ```
 
 Then you'll need to add more test cases. `test/post.test.js` is included as an example.

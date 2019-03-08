@@ -1,5 +1,5 @@
 {
-  "name": "@greatislander/wp-theme-auditor",
+  "name": "@wpaccessibility/wp-theme-auditor",
   "version": "0.1.0",
   "description": "Accessibility auditing tools for WordPress themes.",
   "author": "Ned Zimmerman <ned@bight.ca>",
@@ -9,13 +9,13 @@
     "axe",
     "wordpress"
   ],
-  "homepage": "https://github.com/greatislander/wp-theme-auditor#readme",
+  "homepage": "https://github.com/wpaccessibility/wp-theme-auditor#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greatislander/wp-theme-auditor.git"
+    "url": "git+https://github.com/wpaccessibility/wp-theme-auditor.git"
   },
   "bugs": {
-    "url": "https://github.com/greatislander/wp-theme-auditor/issues"
+    "url": "https://github.com/wpaccessibility/wp-theme-auditor/issues"
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
