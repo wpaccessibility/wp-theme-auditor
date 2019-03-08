@@ -12,8 +12,14 @@ You can install this package to run [Axe](https://deque.com/axe) tests against y
 
 ## Installation
 
-1. From within your theme, run `npm install --save-dev greatislander/wp-theme-auditor` to install the `@wordpress/scripts` package and other related dependencies (if your theme does not already include a `package.json` file, one will be created).
-2. Add more test cases. `/test/post.test.js` is included as an example. See `jest.config.js` for valid naming patterns and locations for test cases.
+1. From your theme's root directory, run `npm install --save-dev greatislander/wp-theme-auditor` to install the `@wordpress/scripts` package and other related dependencies (if your theme does not already include a `package.json` file, one will be created).
+3. Copy the following files into your theme's root directory:
+
+    + `node_modules/@greatislander/wp-theme-auditor/babel.config.js`
+    + `node_modules/@greatislander/wp-theme-auditor/jest.config.js`
+    + `node_modules/@greatislander/wp-theme-auditor/test`
+    
+2. Add more test cases. `test/post.test.js` is included as an example. See `jest.config.js` for valid naming patterns and locations for test cases.
 
 ## Usage
 
