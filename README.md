@@ -12,13 +12,37 @@ You can install this package to run [Axe](https://deque.com/axe) tests against y
 
 ## Installation
 
-1. From your theme's root directory, run `npm install --save-dev greatislander/wp-theme-auditor` to install the `@wordpress/scripts` package and other related dependencies (if your theme does not already include a `package.json` file, one will be created).
-2. Copy the following files into your theme's root directory:
+From your theme's root directory, run the following commands:
 
-    - `node_modules/@greatislander/wp-theme-auditor/babel.config.js`
-    - `node_modules/@greatislander/wp-theme-auditor/jest.config.js`
-    - `node_modules/@greatislander/wp-theme-auditor/test`
-3. Add more test cases. `test/post.test.js` is included as an example. See `jest.config.js` for valid naming patterns and locations for test cases.
+```bash
+npm install --save-dev greatislander/wp-theme-auditor
+npx npm-add-script -k "test:axe" -v "wp-scripts test-e2e"
+cp node_modules/@greatislander/wp-theme-auditor/babel.config.js ./
+cp node_modules/@greatislander/wp-theme-auditor/jest.config.js ./
+cp -r node_modules/@greatislander/wp-theme-auditor/test ./
+```
+
+Then you'll need to add more test cases. `test/post.test.js` is included as an example.
+
+If, say, you wanted to test your theme's contact page, you might create a new test case called `contact.test.js` with modified content from `post.test.js` as follows:
+
+```diff
+/*global describe, beforeAll, page, it, expect */
+
+const { WP_BASE_URL } = require( './support/config' );
+
+--describe( 'Single post', () => {
+++describe( 'Contact page', () => {
+	beforeAll( async () => {
+--		await page.goto( `${ WP_BASE_URL }/?p=1` );
+++		await page.goto( `${ WP_BASE_URL }/contact/` );
+	} );
+
+	it( 'Should pass Axe tests', async () => {
+		await expect( page ).toPassAxeTests();
+	} );
+} );
+```
 
 ## Usage
 
