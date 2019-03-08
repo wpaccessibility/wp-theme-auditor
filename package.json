@@ -37,6 +37,7 @@
   "scripts": {
     "lint:js": "wp-scripts lint-js .",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "postinstall": "cp -r test $INIT_CWD && cp babel.config.js $INIT_CWD",
     "test": "npm run -s lint:js && npm run -s lint:pkg-json"
   }
 }
