@@ -1,15 +1,7 @@
-/**
- * External dependencies
- */
-const path = require( 'path' );
-
-/**
- * Internal dependencies
- */
 const jestE2EConfig = {
 	preset: 'jest-puppeteer',
 	setupFilesAfterEnv: [
-		'@wordpress/jest-puppeteer-axe'
+		'@wordpress/jest-puppeteer-axe',
 	],
 	testMatch: [
 		'**/__tests__/**/*.js',

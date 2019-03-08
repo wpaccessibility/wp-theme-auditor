@@ -2,25 +2,21 @@
   "name": "@greatislander/wp-theme-auditor",
   "version": "0.1.0",
   "description": "Accessibility auditing tools for WordPress themes.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/greatislander/wp-theme-auditor.git"
-  },
+  "author": "Ned Zimmerman <ned@bight.ca>",
+  "license": "GPL-2.0-or-later",
   "keywords": [
     "a11y",
     "axe",
     "wordpress"
   ],
-  "author": "Ned Zimmerman <ned@bight.ca>",
-  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/greatislander/wp-theme-auditor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatislander/wp-theme-auditor.git"
+  },
   "bugs": {
     "url": "https://github.com/greatislander/wp-theme-auditor/issues"
   },
-  "homepage": "https://github.com/greatislander/wp-theme-auditor#readme",
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
@@ -37,5 +33,10 @@
     "@wordpress/jest-puppeteer-axe": "^1.0.0",
     "@wordpress/scripts": "^3.0.0",
     "core-js": "^2.6.5"
+  },
+  "scripts": {
+    "lint:js": "wp-scripts lint-js .",
+    "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "test": "npm run -s lint:js && npm run -s lint:pkg-json"
   }
 }
