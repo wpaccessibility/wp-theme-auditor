@@ -4,7 +4,7 @@ const jestE2EConfig = {
 		'@wordpress/jest-puppeteer-axe',
 	],
 	testMatch: [
-		'<rootDir>/test/*.js',
+		'**/test/*.test.js',
 	],
 };
 

@@ -1,4 +1,4 @@
-/* global describe, beforeAll, page, it, expect */
+/*global describe, beforeAll, page, it, expect */
 
 const { WP_BASE_URL } = require( './support/config' );
 
