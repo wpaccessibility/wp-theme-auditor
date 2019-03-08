@@ -1,0 +1,41 @@
+{
+  "name": "@greatislander/wp-theme-auditor",
+  "version": "0.1.0",
+  "description": "Accessibility auditing tools for WordPress themes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatislander/wp-theme-auditor.git"
+  },
+  "keywords": [
+    "a11y",
+    "axe",
+    "wordpress"
+  ],
+  "author": "Ned Zimmerman <ned@bight.ca>",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/greatislander/wp-theme-auditor/issues"
+  },
+  "homepage": "https://github.com/greatislander/wp-theme-auditor#readme",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/runtime": "^7.3.1",
+    "@wordpress/babel-plugin-import-jsx-pragma": "^2.0.0",
+    "@wordpress/e2e-test-utils": "^1.0.0",
+    "@wordpress/e2e-tests": "^1.0.0",
+    "@wordpress/jest-console": "^3.0.0",
+    "@wordpress/jest-preset-default": "^4.0.0",
+    "@wordpress/jest-puppeteer-axe": "^1.0.0",
+    "@wordpress/scripts": "^3.0.0",
+    "core-js": "^2.6.5"
+  }
+}
