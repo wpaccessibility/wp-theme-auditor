@@ -22,7 +22,7 @@ cp node_modules/@wpaccessibility/wp-theme-auditor/jest.config.js ./
 cp -r node_modules/@wpaccessibility/wp-theme-auditor/test ./
 ```
 
-Then you'll need to add more test cases. `test/post.test.js` is included as an example.
+Then you'll need to add more test cases. You can do this interactively by running `create-test-case` from your theme's root directory.
 
 If, say, you wanted to test your theme's contact page, you might create a new test case called `contact.test.js` with modified content from `post.test.js` as follows:
 
