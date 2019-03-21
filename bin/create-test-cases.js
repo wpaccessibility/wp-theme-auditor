@@ -7,7 +7,7 @@ const shell = require( 'shelljs' );
 
 const init = () => {
 	console.log(
-		chalk.green.bold( 'Creating test cases!' )
+		chalk.green.bold( 'Creating test cases...' )
 	);
 };
 
@@ -63,7 +63,7 @@ const createFile = ( posttype, slug, title ) => {
 
 const success = ( filepath ) => {
 	console.log(
-		chalk.green.bold( `Test case created at ${ filepath }` )
+		chalk.green.bold( `Test case created at ${ filepath }.` )
 	);
 };
 

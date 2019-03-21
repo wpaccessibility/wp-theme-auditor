@@ -41,9 +41,11 @@
   "scripts": {
     "lint:js": "wp-scripts lint-js .",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "postinstall": "postinstall",
     "test": "npm run -s lint:js && npm run -s lint:pkg-json"
   },
   "bin": {
-    "create-test-cases": "./bin/create-test-cases.js"
+    "create-test-cases": "./bin/create-test-cases.js",
+    "postinstall": "./bin/postinstall.js"
   }
 }
