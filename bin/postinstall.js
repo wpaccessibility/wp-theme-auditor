@@ -12,7 +12,6 @@ const init = () => {
 const copyFiles = () => {
 	const sourceDir = `${ process.env.INIT_CWD }/node_modules/@wpaccessibility/wp-theme-auditor`;
 	const destinationDir = process.env.INIT_CWD;
-	shell.cp( '-u', `${ sourceDir }/babel.config.js`, destinationDir );
 	shell.cp( '-u', `${ sourceDir }/jest.config.js`, destinationDir );
 	shell.mkdir( '-p', `${ destinationDir }/test/support` );
 	shell.cp( `${ sourceDir }/test/*.js`, `${ destinationDir }/test/` );
