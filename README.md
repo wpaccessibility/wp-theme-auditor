@@ -16,26 +16,36 @@ From your theme's root directory, run the following commands:
 
 ```bash
 npm install --save-dev wpaccessibility/wp-theme-auditor
+npx npm-add-script -k "create-test-cases" -v "create-test-cases"
 npx npm-add-script -k "test:axe" -v "wp-scripts test-e2e"
-cp node_modules/@wpaccessibility/wp-theme-auditor/babel.config.js ./
-cp node_modules/@wpaccessibility/wp-theme-auditor/jest.config.js ./
-cp -r node_modules/@wpaccessibility/wp-theme-auditor/test ./
 ```
 
-Then you'll need to add more test cases. `test/post.test.js` is included as an example.
+Then you'll need to add more test cases. You can do this interactively by running `npm run create-test-case` from your theme's root directory.
 
-If, say, you wanted to test your theme's contact page, you might create a new test case called `contact.test.js` with modified content from `post.test.js` as follows:
+If, say, you wanted to test your theme's contact page which has a slug of `contact`, you might create a new test case with the following inputs:
 
-```diff
+```bash
+$ npm run create-test-cases
+> twentynineteen@1.3.0 create-test-cases /Users/ned/Sites/a11y/wp-content/themes/twentynineteen
+> create-test-cases
+
+Creating test cases...
+? What is the post type? page
+? What is the slug of the post or page? contact
+? What is the title of the post or page? Contact page
+Test case created at /Users/ned/Sites/a11y/wp-content/themes/twentysixteen/test/contact.test.js.
+```
+
+The resulting test case file would contain the following content:
+
+```javascript
 /*global describe, beforeAll, page, it, expect */
 
 const { WP_BASE_URL } = require( './support/config' );
 
---describe( 'Single post', () => {
-++describe( 'Contact page', () => {
+describe( 'Contact page', () => {
 	beforeAll( async () => {
---		await page.goto( `${ WP_BASE_URL }/?p=1` );
-++		await page.goto( `${ WP_BASE_URL }/contact/` );
+		await page.goto( `${ WP_BASE_URL }/?pagename=contact` );
 	} );
 
 	it( 'Should pass Axe tests', async () => {

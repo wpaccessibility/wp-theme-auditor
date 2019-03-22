@@ -32,11 +32,20 @@
     "@wordpress/jest-preset-default": "^4.0.0",
     "@wordpress/jest-puppeteer-axe": "^1.0.0",
     "@wordpress/scripts": "^3.0.0",
-    "core-js": "^2.6.5"
+    "chalk": "^2.4.2",
+    "core-js": "^2.6.5",
+    "handlebars": "^4.1.1",
+    "inquirer": "^6.2.2",
+    "shelljs": "^0.8.3"
   },
   "scripts": {
     "lint:js": "wp-scripts lint-js .",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "postinstall": "postinstall",
     "test": "npm run -s lint:js && npm run -s lint:pkg-json"
+  },
+  "bin": {
+    "create-test-cases": "./bin/create-test-cases.js",
+    "postinstall": "./bin/postinstall.js"
   }
 }
