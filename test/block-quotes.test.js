@@ -2,9 +2,9 @@
 
 const { WP_BASE_URL } = require( './support/config' );
 
-describe( 'Single post', () => {
+describe( 'Post: Quote Block', () => {
 	beforeAll( async () => {
-		await page.goto( `${ WP_BASE_URL }/?p=1` );
+		await page.goto( `${ WP_BASE_URL }/?name=block-quotes` );
 	} );
 
 	it( 'Should pass Axe tests', async () => {
