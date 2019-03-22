@@ -12,9 +12,11 @@ const init = () => {
 const copyFiles = () => {
 	const sourceDir = `${ process.env.INIT_CWD }/node_modules/@wpaccessibility/wp-theme-auditor`;
 	const destinationDir = process.env.INIT_CWD;
-	shell.cp( `${ sourceDir }/babel.config.js`, destinationDir );
-	shell.cp( `${ sourceDir }/jest.config.js`, destinationDir );
-	shell.cp( '-R', `${ sourceDir }/test`, `${ destinationDir }/test` );
+	shell.cp( '-u', `${ sourceDir }/babel.config.js`, destinationDir );
+	shell.cp( '-u', `${ sourceDir }/jest.config.js`, destinationDir );
+	shell.mkdir( '-p', `${ destinationDir }/test/support` );
+	shell.cp( `${ sourceDir }/test/*.js`, `${ destinationDir }/test/` );
+	shell.cp( `${ sourceDir }/test/support/*`, `${ destinationDir }/test/support/` );
 	return destinationDir;
 };
 
