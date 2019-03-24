@@ -20,7 +20,7 @@ npx npm-add-script -k "create-test-cases" -v "create-test-cases"
 npx npm-add-script -k "test:axe" -v "wp-scripts test-e2e"
 ```
 
-Then you'll need to add more test cases. You can do this interactively by running `npm run create-test-case` from your theme's root directory.
+Then you'll need to add more test cases. You can do this interactively by running `npm run create-test-cases` from your theme's root directory.
 
 If, say, you wanted to test your theme's contact page which has a slug of `contact`, you might create a new test case with the following inputs:
 
