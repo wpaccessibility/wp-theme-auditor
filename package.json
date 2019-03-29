@@ -1,5 +1,5 @@
 {
-  "name": "@wpaccessibility/wp-theme-auditor",
+  "name": "wp-theme-auditor",
   "version": "0.3.0",
   "description": "Accessibility auditing tools for WordPress themes.",
   "author": "Ned Zimmerman <ned@bight.ca>",
