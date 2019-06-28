@@ -34,7 +34,6 @@
   "scripts": {
     "lint:js": "wp-scripts lint-js .",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
-    "postinstall": "postinstall",
     "test": "npm run -s lint:js && npm run -s lint:pkg-json"
   },
   "bin": {

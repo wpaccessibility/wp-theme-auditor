@@ -12,10 +12,17 @@ You can install this package to run [Axe](https://deque.com/axe) tests against y
 
 ## Installation
 
-From your theme's root directory, run the following commands:
+If your theme does not contain a [`package.json`](https://docs.npmjs.com/creating-a-package-json-file) file, create one by running the following command from your theme's root directory:
+
+```bash
+npm init
+```
+
+Run the following commands from your theme's root directory:
 
 ```bash
 npm install --save-dev wpaccessibility/wp-theme-auditor
+node bin/postinstall.js
 npx npm-add-script -k "create-test-cases" -v "create-test-cases"
 npx npm-add-script -k "test:axe" -v "wp-scripts test-e2e"
 ```
