@@ -17,6 +17,10 @@
   "bugs": {
     "url": "https://github.com/wpaccessibility/wp-theme-auditor/issues"
   },
+  "bin": {
+    "create-test-cases": "./bin/create-test-cases.js",
+    "postinstall": "./bin/postinstall.js"
+  },
   "dependencies": {
     "@wordpress/babel-preset-default": "^4.5.0",
     "@wordpress/e2e-test-utils": "^2.3.0",
@@ -35,9 +39,5 @@
     "lint:js": "wp-scripts lint-js .",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
     "test": "npm run -s lint:js && npm run -s lint:pkg-json"
-  },
-  "bin": {
-    "create-test-cases": "./bin/create-test-cases.js",
-    "postinstall": "./bin/postinstall.js"
   }
 }

@@ -6,6 +6,7 @@ const inquirer = require( 'inquirer' );
 const shell = require( 'shelljs' );
 
 const init = () => {
+	// eslint-disable-next-line no-console
 	console.log(
 		chalk.green.bold( 'Creating test cases...' )
 	);
@@ -62,6 +63,7 @@ const createFile = ( posttype, slug, title ) => {
 };
 
 const success = ( filepath ) => {
+	// eslint-disable-next-line no-console
 	console.log(
 		chalk.green.bold( `Test case created at ${ filepath }.` )
 	);

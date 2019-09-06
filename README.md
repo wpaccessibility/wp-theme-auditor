@@ -46,7 +46,7 @@ Test case created at /Users/ned/Sites/a11y/wp-content/themes/twentysixteen/test/
 The resulting test case file would contain the following content:
 
 ```javascript
-/*global describe, beforeAll, page, it, expect */
+/*global page */
 
 const { WP_BASE_URL } = require( './support/config' );
 
