@@ -31,8 +31,9 @@
     "@wordpress/scripts": "^4.1.0",
     "chalk": "^2.4.2",
     "core-js": "^3.2.1",
-    "handlebars": "^4.2.0",
+    "handlebars": "^4.3.3",
     "inquirer": "^7.0.0",
+    "jest-html-reporter": "^2.6.2",
     "shelljs": "^0.8.3"
   },
   "scripts": {
