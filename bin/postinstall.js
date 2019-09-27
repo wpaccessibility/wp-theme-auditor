@@ -4,6 +4,7 @@ const chalk = require( 'chalk' );
 const shell = require( 'shelljs' );
 
 const init = () => {
+	// eslint-disable-next-line no-console
 	console.log(
 		chalk.green.bold( 'Copying configuration files...' )
 	);
@@ -21,6 +22,7 @@ const copyFiles = () => {
 };
 
 const success = ( filepath ) => {
+	// eslint-disable-next-line no-console
 	console.log(
 		chalk.green.bold( `Configuration files copied to ${ filepath }.` )
 	);
