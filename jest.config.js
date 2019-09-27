@@ -3,6 +3,15 @@ const jestE2EConfig = {
 	setupFilesAfterEnv: [
 		'@wordpress/jest-puppeteer-axe',
 	],
+	reporters: [
+		'default',
+		[
+			'./node_modules/jest-html-reporter', {
+				pageTitle: 'WP Theme Auditor Report',
+				outputPath: 'test/report.html',
+			},
+		],
+	],
 	testMatch: [
 		'**/test/*.test.js',
 	],
