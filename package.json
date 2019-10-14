@@ -2,14 +2,32 @@
   "name": "wp-theme-auditor",
   "version": "0.3.0",
   "description": "Accessibility auditing tools for WordPress themes.",
-  "author": "Ned Zimmerman <ned@bight.ca>",
+  "author": {
+    "name": "Ned Zimmerman",
+    "email": "ned@bight.ca",
+    "url": "https://bight.ca"
+  },
   "license": "GPL-2.0-or-later",
   "keywords": [
-    "a11y",
+    "accessibility",
     "axe",
-    "wordpress"
+    "wordpress",
+    "wp-theme-auditor"
   ],
   "homepage": "https://github.com/wpaccessibility/wp-theme-auditor#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:js"
+    ],
+    "package.json": [
+      "npm run lint:pkg-json"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wpaccessibility/wp-theme-auditor.git"
@@ -18,8 +36,7 @@
     "url": "https://github.com/wpaccessibility/wp-theme-auditor/issues"
   },
   "bin": {
-    "create-test-cases": "./bin/create-test-cases.js",
-    "postinstall": "./bin/postinstall.js"
+    "create-test-cases": "./bin/create-test-cases.js"
   },
   "dependencies": {
     "@wordpress/babel-preset-default": "^4.5.0",
@@ -33,8 +50,11 @@
     "core-js": "^3.2.1",
     "handlebars": "^4.3.3",
     "inquirer": "^7.0.0",
-    "jest-html-reporter": "^2.6.2",
-    "shelljs": "^0.8.3"
+    "jest-html-reporter": "^2.6.2"
+  },
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2"
   },
   "scripts": {
     "lint:js": "wp-scripts lint-js .",
