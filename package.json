@@ -36,8 +36,7 @@
     "url": "https://github.com/wpaccessibility/wp-theme-auditor/issues"
   },
   "bin": {
-    "create-test-cases": "./bin/create-test-cases.js",
-    "postinstall": "./bin/postinstall.js"
+    "create-test-cases": "./bin/create-test-cases.js"
   },
   "dependencies": {
     "@wordpress/babel-preset-default": "^4.5.0",
