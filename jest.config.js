@@ -7,6 +7,7 @@ const jestE2EConfig = {
 		'default',
 		[
 			'./node_modules/jest-html-reporter', {
+				includeFailureMsg: true,
 				pageTitle: 'WP Theme Auditor Report',
 				outputPath: 'test/report.html',
 			},
